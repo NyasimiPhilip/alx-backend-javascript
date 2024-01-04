@@ -6,7 +6,7 @@
 <p>Tested on Ubuntu 20.04 LTS using NodeJS v16.15.x.</p>
 
 <h2>Projects</h2>
-<p>The repository includes the following projects completed during the ALX backend program:</p>
+<p>The repository includes the following projects completed during the ALX backend track:</p>
 
 <table>
   <thead>
