@@ -1,11 +1,13 @@
 {
-  "name": "0x01-es6_promise",
+  "name": "0x00-es6_basic",
   "version": "1.0.0",
-  "description": "0x01. ES6 Promises",
-  "main": ".eslintrc.js",
+  "description": "",
+  "main": "0-constants.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "find . -name '*.mjs' -exec node {} \\;"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +17,12 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1"
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.6.1",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "mkdirp": "^3.0.1"
+   
   }
 }
