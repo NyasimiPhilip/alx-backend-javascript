@@ -24,6 +24,8 @@
   "dependencies": {
     "@bcoe/v8-coverage": "^0.2.3",
     "@unicode/unicode-15.0.0": "^1.5.2",
+    "es-value-fixtures": "^1.4.2",
+    "has-strict-mode": "^1.0.1",
     "mkdirp": "^3.0.1",
     "tape": "^5.7.2"
   }
