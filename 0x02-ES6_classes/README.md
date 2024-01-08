@@ -127,9 +127,7 @@ console.log(tc1 instanceof TestCar);
 console.log(tc2);
 console.log(tc2 instanceof TestCar);
 console.log(tc1 == tc2);</code></pre>
-        </li>
-
-        <!-- Task 100 -->
+        </li>       
         <li>
             <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/100-evcar.js" target="_blank">Task 11: EVCar</a></h2>
             <p>Import Car from 10-car.js. Implement a class named EVCar that extends the Car class:</p>
