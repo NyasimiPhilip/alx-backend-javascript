@@ -1,7 +1,7 @@
   <h1>Tasks</h1>
     <ul>
         <li>
-            <h2>Task 0: Basic List of Objects</h2>
+            <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x03-ES6_data_manipulation/0-get_list_students.js" target="_blank">Task 0: Basic List of Objects</a></h2>
             <p>Write a function <code>getListStudents</code> that returns an array of student objects with id, firstName, and location attributes.</p>
         </li>
     </ul>
