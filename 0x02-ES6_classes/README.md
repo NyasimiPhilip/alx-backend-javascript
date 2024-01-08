@@ -73,3 +73,70 @@ try {
     console.log(err);</code></pre>
     </li>
 </ul>
+<ul>
+    <li>
+        <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/6-sky_high.js" target="_blank">Task 6: Inheritance</a></h2>
+        <p>Import <code>Building</code> from <code>5-building.js</code>. Implement a class named <code>SkyHighBuilding</code> that extends from <code>Building</code>. Constructor attributes: sqft (Number) (must be assigned to the parent class <code>Building</code>), floors (Number).</p>
+        <pre><code>import SkyHighBuilding from './6-sky_high.js';
+const building = new SkyHighBuilding(140, 60);
+console.log(building.sqft);
+console.log(building.floors);
+console.log(building.evacuationWarningMessage());</code></pre>
+    </li>
+</ul>
+<ul>
+    <li>
+        <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/7-airport.js" target="_blank">Task 7: Airport</a></h2>
+        <p>Implement a class named <code>Airport</code> with constructor attributes: name (String), code (String).</p>
+        <pre><code>import Airport from "./7-airport.js";
+const airportSF = new Airport('San Francisco Airport', 'SFO');
+console.log(airportSF);
+console.log(airportSF.toString());</code></pre>
+    </li>
+</ul>
+<ul>
+    <li>
+        <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/8-hbtn_class.js" target="_blank">Task 8: Primitive - Holberton Class</a></h2>
+        <p>Implement a class named <code>HolbertonClass</code> with constructor attributes: size (Number), location (String).</p>
+        <pre><code>import HolbertonClass from "./8-hbtn_class.js";
+const hc = new HolbertonClass(12, "Mezzanine");
+console.log(Number(hc));
+console.log(String(hc));</code></pre>
+    </li>
+</ul>
+<ul>
+    <li>
+        <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/9-hoisting.js" target="_blank">Task 9: Hoisting</a></h2>
+        <p>Fix the provided code to make it work.</p>
+        <pre><code>import listOfStudents from "./9-hoisting.js";
+console.log(listOfStudents);
+const listPrinted = listOfStudents.map(
+    student => student.fullStudentDescription
+);
+console.log(listPrinted)</code></pre>
+    </li>
+    <li>
+            <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/10-car.js" target="_blank">Task 10: Vroom</a></h2>
+            <p>Implement a class named Car:</p>
+            <pre><code>import Car from "./10-car.js";
+class TestCar extends Car {}
+const tc1 = new TestCar("Nissan", "Turbo", "Pink");
+const tc2 = tc1.cloneCar();
+console.log(tc1);
+console.log(tc1 instanceof TestCar);
+console.log(tc2);
+console.log(tc2 instanceof TestCar);
+console.log(tc1 == tc2);</code></pre>
+        </li>
+
+        <!-- Task 100 -->
+        <li>
+            <h2><a href="https://github.com/NyasimiPhilip/alx-backend-javascript/blob/master/0x02-ES6_classes/100-evcar.js" target="_blank">Task 11: EVCar</a></h2>
+            <p>Import Car from 10-car.js. Implement a class named EVCar that extends the Car class:</p>
+            <pre><code>import EVCar from './100-evcar.js';
+const ec1 = new EVCar("Tesla", "Turbo", "Red", "250");
+console.log(ec1);
+const ec2 = ec1.cloneCar();
+console.log(ec2);</code></pre>
+        </li>
+    </ul>
