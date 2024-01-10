@@ -1,18 +1,25 @@
-   <h2>Task 0: Creating an interface for a student</h2>
-    <p>
-        Copy the following configuration files (provided above) into the task_0 directory:
-        <strong>package.json, .eslintrc.js, tsconfig.json, webpack.config.js</strong>
-    </p>
-    <p>
-        Write your code in the <strong>main.ts</strong> file:
-        Write an interface named <strong>Student</strong> that accepts the following elements: 
-        firstName (string), lastName (string), age (number), and location (string).
-    </p>
-    <p>
-        Create two students, and create an array named <strong>studentsList</strong> containing the two variables.
-        Using Vanilla Javascript, render a table, and for each element in the array, append a new row to the table.
-        Each row should contain the first name of the student and the location.
-    </p>
+   <h2>Task 0: Creating an interface for a student</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Copy the following configuration files (provided above) into the task_0 directory: <strong>package.json, .eslintrc.js, tsconfig.json, webpack.config.js</strong></li>
+        <li>Write your code in the <strong>main.ts</strong> file:</li>
+        <ul>
+            <li>Write an interface named <strong>Student</strong> that accepts the following elements: <strong>firstName (string), lastName (string), age (number), and location (string)</strong></li>
+            <li>Create two students, and create an array named <strong>studentsList</strong> containing the two variables</li>
+            <li>Using Vanilla JavaScript, render a table, and for each element in the array, append a new row to the table</li>
+        </ul>
+        <li>Requirements:</li>
+        <ul>
+            <li>When running, Webpack should return <strong>No type errors found</strong></li>
+            <li>Every variable should use TypeScript when possible</li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_0/js/main.ts, task_0/package.json, task_0/.eslintrc.js, task_0/tsconfig.json, task_0/webpack.config.js</strong></li>
+    </ul>
     <br>
     <h2>Task 1: Let's build a Teacher interface</h2>
     <p>
