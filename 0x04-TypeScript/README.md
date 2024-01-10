@@ -21,228 +21,285 @@
         <li>Files: <strong>task_0/js/main.ts, task_0/package.json, task_0/.eslintrc.js, task_0/tsconfig.json, task_0/webpack.config.js</strong></li>
     </ul>
     <br>
-    <h2>Task 1: Let's build a Teacher interface</h2>
-    <p>
-        Create a directory <strong>task_1</strong> and copy these configuration files into this folder: 
-        <strong>package.json, tsconfig.json, webpack.config.js</strong>
-    </p>
-    <p>
-        <strong>firstName</strong> (string) and <strong>lastName</strong> (string). These two attributes should only be modifiable when a Teacher is first initialized.
-    </p>
-    <p>
-        <strong>fullTimeEmployee</strong> (boolean) this attribute should always be defined.
-    </p>
-    <p>
-        <strong>yearsOfExperience</strong> (number) this attribute is optional.
-    </p>
-    <p>
-        <strong>location</strong> (string) this attribute should always be defined.
-    </p>
-    <p>
-        Add the possibility to add any attribute to the Object like <strong>contract</strong> (boolean) without specifying the name of the attribute.
-        Example:
-        <code>
-            const teacher3: Teacher = {
-                firstName: 'John',
-                fullTimeEmployee: false,
-                lastName: 'Doe',
-                location: 'London',
-                contract: false,
-            };
-            console.log(teacher3);
-            // should print
-            // Object
-            // contract: false
-            // firstName: "John"
-            // fullTimeEmployee: false
-            // lastName: "Doe"
-            // location: "London"
-        </code>
-    </p>
+      <h2>Task 1: Building a Teacher interface</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Create a directory <strong>task_1</strong> and copy these configuration files into this folder: <strong>package.json, tsconfig.json, webpack.config.js</strong></li>
+        <li>Create a <strong>Teacher</strong> interface with the following attributes:</li>
+        <ul>
+            <li><strong>firstName</strong> (string) and <strong>lastName</strong> (string). These two attributes should only be modifiable when a Teacher is first initialized</li>
+            <li><strong>fullTimeEmployee</strong> (boolean) - this attribute should always be defined</li>
+            <li><strong>yearsOfExperience</strong> (number) - this attribute is optional</li>
+            <li><strong>location</strong> (string) - this attribute should always be defined</li>
+            <li>Add the possibility to add any attribute to the Object like <strong>contract</strong> (boolean) without specifying the name of the attribute</li>
+        </ul>
+        <li>Example:</li>
+        <pre>
+            <code>
+                const teacher3: Teacher = {
+                  firstName: 'John',
+                  fullTimeEmployee: false,
+                  lastName: 'Doe',
+                  location: 'London',
+                  contract: false,
+                };                
+                console.log(teacher3);                
+                // should print
+                // Object
+                // contract: false
+                // firstName: "John"
+                // fullTimeEmployee: false
+                // lastName: "Doe"
+                // location: "London"
+            </code>
+        </pre>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_1/js/main.ts, task_1/webpack.config.js, task_1/tsconfig.json, task_1/package.json</strong></li>
+    </ul>
+    <br>    
+    <h2>Task 2: Extending the Teacher class</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Write an interface named <strong>Directors</strong> that extends <strong>Teacher</strong>. It requires an attribute named <strong>numberOfReports (number)</strong></li>
+        <li>Example:</li>
+        <pre>
+            <code>
+                const director1: Directors = {
+                  firstName: 'John',
+                  lastName: 'Doe',
+                  location: 'London',
+                  fullTimeEmployee: true,
+                  numberOfReports: 17,
+                };
+                console.log(director1);                
+                // should print
+                // Object
+                // firstName: "John"
+                // fullTimeEmployee: true
+                // lastName: "Doe"
+                // location: "London"
+                // numberOfReports: 17
+            </code>
+        </pre>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_1/js/main.ts</strong></li>
+    </ul>    
+    <br>    
+    <h2>Task 3: Printing teachers</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Write a function named <strong>printTeacher</strong>:</li>
+        <ul>
+            <li>It accepts two arguments <strong>firstName</strong> and <strong>lastName</strong></li>
+            <li>It returns the first letter of the firstName and the full lastName</li>
+            <li>Example: <code>printTeacher("John", "Doe") -> J. Doe</code></li>
+        </ul>
+        <li>Write an interface for the function named <strong>printTeacherFunction</strong></li>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_1/js/main.ts</strong></li>
+    </ul>
+    <br>    
+    <h2>Task 4: Writing a class</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Write a Class named <strong>StudentClass</strong>:</li>
+        <ul>
+            <li>The constructor accepts <strong>firstName (string)</strong> and <strong>lastName (string)</strong> arguments</li>
+            <li>The class has a method named <strong>workOnHomework</strong> that returns the string <strong>"Currently working"</strong></li>
+            <li>The class has a method named <strong>displayName</strong>. It returns the firstName of the student</li>
+            <li>The constructor of the class should be described through an Interface</li>
+            <li>The class should be described through an Interface</li>
+        </ul>
+        <li>Requirements:</li>
+        <ul>
+            <li>You can reuse the Webpack configuration from the previous exercise to compile the code.</li>
+            <li>When running <code>npm run build</code>, no TypeScript error should be displayed.</li>
+            <li>Every variable should use TypeScript when possible.</li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_1/js/main.ts</strong></li>
+    </ul>
     <br>
-    <h2>Task 2: Extending the Teacher class</h2>
-    <p>
-        Write an interface named <strong>Directors</strong> that extends <strong>Teacher</strong>. 
-        It requires an attribute named <strong>numberOfReports</strong> (number).
-        Example:
-        <code>
-            const director1: Directors = {
-                firstName: 'John',
-                lastName: 'Doe',
-                location: 'London',
-                fullTimeEmployee: true,
-                numberOfReports: 17,
-            };
-            console.log(director1);
-            // should print
-            // Object
-            // firstName: "John"
-            // fullTimeEmployee: true
-            // lastName: "Doe"
-            // location: "London"
-            // numberOfReports: 17
-        </code>
-    </p>
+     <h2>Task 5: Advanced types Part 1</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Create the <strong>DirectorInterface</strong> interface with the 3 expected methods:</li>
+        <ul>
+            <li><code>workFromHome()</code> returning a string</li>
+            <li><code>getCoffeeBreak()</code> returning a string</li>
+            <li><code>workDirectorTasks()</code> returning a string</li>
+        </ul>
+        <li>Create the <strong>TeacherInterface</strong> interface with the 3 expected methods:</li>
+        <ul>
+            <li><code>workFromHome()</code> returning a string</li>
+            <li><code>getCoffeeBreak()</code> returning a string</li>
+            <li><code>workTeacherTasks()</code> returning a string</li>
+        </ul>
+        <li>Create a class <strong>Director</strong> that will implement <strong>DirectorInterface</strong></li>
+        <ul>
+            <li><code>workFromHome</code> should return the string <strong>"Working from home"</strong></li>
+            <li><code>getCoffeeBreak</code> should return the string <strong>"Getting a coffee break"</strong></li>
+            <li><code>workDirectorTasks</code> should return the string <strong>"Getting to director tasks"</strong></li>
+        </ul>
+        <li>Create a class <strong>Teacher</strong> that will implement <strong>TeacherInterface</strong></li>
+        <ul>
+            <li><code>workFromHome</code> should return the string <strong>"Cannot work from home"</strong></li>
+            <li><code>getCoffeeBreak</code> should return the string <strong>"Cannot have a break"</strong></li>
+            <li><code>workTeacherTasks</code> should return the string <strong>"Getting to work"</strong></li>
+        </ul>
+        <li>Create a function <strong>createEmployee</strong> with the following requirements:</li>
+        <ul>
+            <li>It can return either a <strong>Director</strong> or a <strong>Teacher</strong> instance</li>
+            <li>It accepts 1 argument:</li>
+            <ul>
+                <li><strong>salary</strong> (either number or string)</li>
+            </ul>
+            <li>If salary is a number and less than 500 - It should return a new <strong>Teacher</strong>. Otherwise, it should return a <strong>Director</strong></li>
+        </ul>
+        <li>Expected result:</li>
+        <ul>
+            <li><code>console.log(createEmployee(200)); // Teacher</code></li>
+            <li><code>console.log(createEmployee(1000)); // Director</code></li>
+            <li><code>console.log(createEmployee('$500')); // Director</code></li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_2/js/main.ts, task_2/webpack.config.js, task_2/tsconfig.json, task_2/package.json</strong></li>
+    </ul>    
     <br>
-    <h2>Task 3: Printing teachers</h2>
-    <p>
-        Write a function <strong>printTeacher</strong>:
-        It accepts two arguments <strong>firstName</strong> and <strong>lastName</strong>.
-        It returns the first letter of the firstName and the full lastName.
-        Example: <code>printTeacher("John", "Doe") -> J. Doe</code>
-    </p>
-    <p>
-        Write an interface for the function named <strong>printTeacherFunction</strong>.
-    </p>
+    <h2>Task 6: Creating functions specific to employees</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Write a function <strong>isDirector</strong>:</li>
+        <ul>
+            <li>It accepts <strong>employee</strong> as an argument</li>
+            <li>It will be used as a type predicate and if the employee is a director</li>
+        </ul>
+        <li>Write a function <strong>executeWork</strong>:</li>
+        <ul>
+            <li>It accepts <strong>employee</strong> as an argument</li>
+            <li>If the employee is a <strong>Director</strong>, it will call <strong>workDirectorTasks</strong></li>
+            <li>If the employee is a <strong>Teacher</strong>, it will call <strong>workTeacherTasks</strong></li>
+        </ul>
+        <li>Expected result:</li>
+        <ul>
+            <li><code>executeWork(createEmployee(200)); // Getting to work</code></li>
+            <li><code>executeWork(createEmployee(1000)); // Getting to director tasks</code></li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_2/js/main.ts</strong></li>
+    </ul>    
     <br>
-    <h2>Task 4: Writing a class</h2>
-    <p>
-        Write a Class named <strong>StudentClass</strong>:
-        The constructor accepts <strong>firstName</strong> (string) and <strong>lastName</strong> (string) arguments.
-        The class has a method named <strong>workOnHomework</strong> that returns the string <strong>Currently working</strong>.
-        The class has a method named <strong>displayName</strong>. It returns the firstName of the student.
-        The constructor of the class should be described through an Interface.
-        The class should be described through an Interface.
-    </p>
-    <p>
-        Requirements:
-        You can reuse the Webpack configuration from the previous exercise to compile the code.
-        When running <strong>npm run build</strong>, no TypeScript error should be displayed.
-        Every variable should use TypeScript when possible.
-    </p>
-    <br>
-    <h2>Task 5: Advanced types Part 1</h2>
-    <p>
-        Create the <strong>DirectorInterface</strong> interface with the 3 expected methods:
-        <strong>workFromHome</strong>() returning a string
-        <strong>getCoffeeBreak</strong>() returning a string
-        <strong>workDirectorTasks</strong>() returning a string
-    </p>
-    <p>
-        Create the <strong>TeacherInterface</strong> interface with the 3 expected methods:
-        <strong>workFromHome</strong>() returning a string
-        <strong>getCoffeeBreak</strong>() returning a string
-        <strong>workTeacherTasks</strong>() returning a string
-    </p>
-    <p>
-        Create a class <strong>Director</strong> that will implement <strong>DirectorInterface</strong>
-        <strong>workFromHome</strong> should return the string <strong>Working from home</strong>
-        <strong>getToWork</strong> should return the string <strong>Getting a coffee break</strong>
-        <strong>workDirectorTasks</strong> should return the string <strong>Getting to director tasks</strong>
-    </p>
-    <p>
-        Create a class <strong>Teacher</strong> that will implement <strong>TeacherInterface</strong>
-        <strong>workFromHome</strong> should return the string <strong>Cannot work from home</strong>
-        <strong>getCoffeeBreak</strong> should return the string <strong>Cannot have a break</strong>
-        <strong>workTeacherTasks</strong> should return the string <strong>Getting to work</strong>
-    </p>
-    <p>
-        Create a function <strong>createEmployee</strong> with the following requirements:
-        It can return either a <strong>Director</strong> or a <strong>Teacher</strong> instance
-        It accepts 1 argument:
-        <strong>salary</strong> (either number or string)
-        if salary is a number and less than 500 - It should return a new Teacher. Otherwise, it should return a Director
-        Expected result:
-        <code>
-            console.log(createEmployee(200));
-            // Teacher
-            console.log(createEmployee(1000));
-            // Director
-            console.log(createEmployee('$500'));
-            // Director
-        </code>
-    </p>
-    <br>
-    <h2>Task 6: Creating functions specific to employees</h2>
-    <p>
-        Write a function <strong>isDirector</strong>:
-        it accepts <strong>employee</strong> as an argument
-        it will be used as a type predicate and if the employee is a director
-    </p>
-    <p>
-        Write a function <strong>executeWork</strong>:
-        it accepts <strong>employee</strong> as an argument
-        if the employee is a Director, it will call <strong>workDirectorTasks</strong>
-        if the employee is a Teacher, it will call <strong>workTeacherTasks</strong>
-        Expected result:
-        <code>
-            executeWork(createEmployee(200));
-            // Getting to work
-            executeWork(createEmployee(1000));
-            // Getting to director tasks
-        </code>
-    </p>
-    <br>
-    <h2>Task 7: String literal types</h2>
-    <p>
-        Write a String literal type named <strong>Subjects</strong> allowing a variable to have the value <strong>Math</strong> or <strong>History</strong> only. 
-    </p>
-    <p>
-        Write a function named <strong>teachClass</strong>:
-        it takes <strong>todayClass</strong> as an argument
-        it will return the string <strong>Teaching Math</strong> if <strong>todayClass</strong> is Math
-        it will return the string <strong>Teaching History</strong> if <strong>todayClass</strong> is History
-        Expected result:
-        <code>
-            teachClass('Math');
-            // Teaching Math
-            teachClass('History');
-            // Teaching History
-        </code>
-    </p>
-    <br>
-    <h2>Task 8: Ambient Namespaces</h2>
-    <p>
-        Create a directory called <strong>task_3</strong> and copy these configuration files into it: <strong>package.json, webpack.config.js, tsconfig.json</strong>.
-    </p>
-    <p>
-        The first part of will require that you build an interface and a type. 
-        Inside a file named <strong>interface.ts</strong>:
-        Create a type <strong>RowID</strong> and set it equal to <strong>number</strong>
-        Create an interface <strong>RowElement</strong> that contains these 3 fields:
-        <strong>firstName</strong>: string
-        <strong>lastName</strong>: string
-        <strong>age</strong>?: number
-    </p>
-    <p>
-        You are building the next part of the application architecture. The goal is to save the entities to a database. 
-        Because of time constraints, you can't write a connector to the database, and you decided to download a library called <strong>crud.js</strong>. 
-        Copy this file into the <strong>task_3/js</strong> directory.
-    </p>
-    <p>
-        Write an ambient file within <strong>task_3/js</strong>, named <strong>crud.d.ts</strong> containing the type declarations for each crud function. 
-        At the top of the file import <strong>RowID</strong> and <strong>RowElement</strong> from <strong>interface.ts</strong>.
-    </p>
-    <p>
-        In <strong>main.ts</strong>
-        At the top of the file create a triple slash directive that includes all the dependencies from <strong>crud.d.ts</strong>
-        Import the <strong>rowID</strong> type and <strong>rowElement</strong> from <strong>interface.ts</strong>
-        Import everything from <strong>crud.js</strong> as <strong>CRUD</strong>
-        Create an object called <strong>row</strong> with the type <strong>RowElement</strong> with the fields set to these values:
-        <strong>firstName</strong>: Guillaume
-        <strong>lastName</strong>: Salva
-        Create a const variable named <strong>newRowID</strong> with the type <strong>RowID</strong> and assign the value the <strong>insertRow</strong> command.
-        Next, create a const variable named <strong>updatedRow</strong> with the type <strong>RowElement</strong> and update row with an age field set to 23.
-        Finally, call the <strong>updateRow</strong> and <strong>deleteRow</strong> commands.
-        Expected result:
-        <code>
-            const obj = {firstName: "Guillaume", lastName: "Salva"};
-            CRUD.insertRow(obj)
-            // Insert row {firstName: "Guillaume", lastName: "Salva"}
-            const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
-            CRUD.updateRow(newRowID, updatedRow);
-            // Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
-            CRUD.deleteRow(125);
-            // Delete row id 125
-        </code>
-    </p>
-    <p>
-        Requirements:
-        When running <strong>npm run build</strong>, no TypeScript error should be displayed.
-        Every variable should use TypeScript when possible.
-        The main file and the ambient file should both import the types defined in the interface file.
-        You can easily test your ambient file by looking at the intellisense of your IDE when using the 3rd party functions.
-    </p>
+    <h2>Task 7: String literal types</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Write a String literal type named <strong>Subjects</strong> allowing a variable to have the value <strong>Math</strong> or <strong>History</strong> only</li>
+        <li>Write a function named <strong>teachClass</strong>:</li>
+        <ul>
+            <li>It takes <strong>todayClass</strong> as an argument</li>
+            <li>It will return the string <strong>Teaching Math</strong> if <strong>todayClass</strong> is <strong>Math</strong></li>
+            <li>It will return the string <strong>Teaching History</strong> if <strong>todayClass</strong> is <strong>History</strong></li>
+        </ul>
+        <li>Expected result:</li>
+        <ul>
+            <li><code>teachClass('Math'); // Teaching Math</code></li>
+            <li><code>teachClass('History'); // Teaching History</code></li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_2/js/main.ts</strong></li>
+    </ul>
+      <h2>Task 8: Ambient Namespaces</h2>    
+    <p>Mandatory:</p>
+    <ul>
+        <li>Create a directory called <strong>task_3</strong> and copy these configuration files into it: <strong>package.json, webpack.config.js, tsconfig.json</strong></li>
+        <li>Inside a file named <strong>interface.ts</strong>:</li>
+        <ul>
+            <li>Create a type <strong>RowID</strong> and set it equal to <strong>number</strong></li>
+            <li>Create an interface <strong>RowElement</strong> that contains these 3 fields:</li>
+            <ul>
+                <li><code>firstName: string</code></li>
+                <li><code>lastName: string</code></li>
+                <li><code>age?: number</code></li>
+            </ul>
+        </ul>
+        <li>Write an ambient file within <strong>task_3/js</strong>, named <strong>crud.d.ts</strong> containing the type declarations for each crud function. At the top of the file import <strong>RowID</strong> and <strong>RowElement</strong> from <strong>interface.ts</strong>.</li>
+        <li>In <strong>main.ts</strong></li>
+        <ul>
+            <li>At the top of the file create a triple slash directive that includes all the dependencies from <strong>crud.d.ts</strong></li>
+            <li>Import the <strong>RowID</strong> type and <strong>RowElement</strong> from <strong>interface.ts</strong></li>
+            <li>Import everything from <strong>crud.js</strong> as <strong>CRUD</strong></li>
+            <li>Create an object called <strong>row</strong> with the type <strong>RowElement</strong> with the fields set to these values:</li>
+            <ul>
+                <li><code>firstName: 'Guillaume'</code></li>
+                <li><code>lastName: 'Salva'</code></li>
+            </ul>
+            <li>Create a const variable named <strong>newRowID</strong> with the type <strong>RowID</strong> and assign the value the <strong>insertRow</strong> command.</li>
+            <li>Next, create a const variable named <strong>updatedRow</strong> with the type <strong>RowElement</strong> and update <strong>row</strong> with an age field set to <strong>23</strong></li>
+            <li>Finally, call the <strong>updateRow</strong> and <strong>deleteRow</strong> commands.</li>
+        </ul>
+        <li>Expected result:</li>
+        <pre>
+            <code>
+                const obj = {firstName: "Guillaume", lastName: "Salva"};
+                CRUD.insertRow(obj)
+                // Insert row {firstName: "Guillaume", lastName: "Salva"}
+                const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
+                CRUD.updateRow(newRowID, updatedRow);
+                // Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
+                CRUD.deleteRow(125);
+                // Delete row id 125
+            </code>
+        </pre>
+        <li>Requirements:</li>
+        <ul>
+            <li>When running <code>npm run build</code>, no TypeScript error should be displayed.</li>
+            <li>Every variable should use TypeScript when possible.</li>
+            <li>The main file and the ambient file should both import the types defined in the interface file.</li>
+            <li>You can easily test your ambient file by looking at the intellisense of your IDE when using the 3rd party functions.</li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_3/js/main.ts, task_3/js/interface.ts, task_3/js/crud.d.ts</strong></li>
+    </ul>  
+    
+
+
+    
+    <
+
+
+
+    
     <br>
     <h2>Task 9: Namespace & Declaration merging</h2>
     <p>
