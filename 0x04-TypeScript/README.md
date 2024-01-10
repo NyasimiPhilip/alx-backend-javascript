@@ -291,92 +291,118 @@
         <li>Directory: <strong>0x04-TypeScript</strong></li>
         <li>Files: <strong>task_3/js/main.ts, task_3/js/interface.ts, task_3/js/crud.d.ts</strong></li>
     </ul>  
-    
-
-
-    
-    <
-
-
-
-    
     <br>
-    <h2>Task 9: Namespace & Declaration merging</h2>
-    <p>
-        Create a new directory <strong>task_4</strong> and copy the above <strong>tsconfig.json</strong> and put this <strong>package.json</strong> in there.
-        (Package.json content)
-    </p>
-    <p>
-        In <strong>task_4/js/subjects</strong>:
-        Create a file <strong>Teacher.ts</strong> and write a <strong>Teacher</strong> interface in a namespace named <strong>Subjects</strong>.
-        The interface requires <strong>firstName</strong> and <strong>lastName</strong> as string.
-        Create a file <strong>Subject.ts</strong> and write a <strong>Subject</strong> class in the same namespace named <strong>Subjects</strong>.
-        The class has one attribute <strong>teacher</strong> that implements the <strong>Teacher</strong> interface.
-        The class has one setter method <strong>setTeacher</strong> that accepts a teacher in an argument (and as a setter, set the instance attribute teacher with it).
-        Create a file <strong>Cpp.ts</strong> and make the following modifications in the same namespace.
-        Using declaration merging, add a new optional attribute <strong>experienceTeachingC</strong> (number) to the Teacher interface.
-        Create a class <strong>Cpp</strong> extending from <strong>Subject</strong>.
-        Write a method named <strong>getRequirements</strong> that will return a string: "Here is the list of requirements for Cpp".
-        Write a method named <strong>getAvailableTeacher</strong> that will return a string: "Available Teacher: <first name of teacher>".
-        If the teacher doesn't have any experience in teaching C, then the method should return a string: "No available teacher".
-        Create a file <strong>React.ts</strong> and write a <strong>React</strong> Class in the same namespace.
-        Add a new attribute <strong>experienceTeachingReact</strong> (number) to the Teacher interface.
-        In the class, write a method named <strong>getRequirements</strong> that will return a string: "Here is the list of requirements for React".
-        Write a method named <strong>getAvailableTeacher</strong> that will return a string: "Available Teacher: <first name of teacher>".
-        If the teacher doesn't have any experience in teaching React, then the method should return a string: "No available teacher".
-        Create a file <strong>Java.ts</strong> and write a <strong>Java</strong> Class in the same namespace.
-        Add a new attribute <strong>experienceTeachingJava</strong> (number) to the Teacher interface.
-        In the class, write a method named <strong>getRequirements</strong> that will return a string: "Here is the list of requirements for Java".
-        Write a method named <strong>getAvailableTeacher</strong> that will return a string: "Available Teacher: <first name of teacher>".
-        If the teacher doesn't have any experience in teaching Java, then the method should return a string: "No available teacher".
-    </p>
+    <h2>Task 9: Namespace & Declaration merging</h2>    
+    <ul>
+        <li>Create a new directory <strong>task_4</strong> and copy the above <strong>tsconfig.json</strong> and put this <strong>package.json</strong> in there</li>
+        <pre>
+            <code>
+                {
+                  "name": "task_4",
+                  "version": "1.0.0",
+                  "description": "",
+                  "main": "index.js",
+                  "scripts": {
+                    "build": "webpack",
+                    "test": "echo \"Error: no test specified\" && exit 1"
+                  },
+                  "keywords": [],
+                  "author": "",
+                  "license": "ISC",
+                  "devDependencies": {
+                    "@typescript-eslint/eslint-plugin": "^2.4.0",
+                    "@typescript-eslint/parser": "^2.4.0",
+                    "clean-webpack-plugin": "^3.0.0",
+                    "fork-ts-checker-webpack-plugin": "^1.5.1",
+                    "html-webpack-plugin": "^3.2.0",
+                    "ts-loader": "^6.2.0",
+                    "typescript": "^3.6.4",
+                    "webpack": "^4.41.2",
+                    "webpack-cli": "^3.3.9",
+                    "webpack-dev-server": "^3.8.2"
+                  }
+                }
+            </code>
+        </pre>
+        <li>In <strong>task_4/js/subjects</strong>:</li>
+        <ul>
+            <li>Create a file <strong>Teacher.ts</strong> and write a <strong>Teacher</strong> interface in a namespace named <strong>Subjects</strong>.</li>
+            <ul>
+                <li>The interface requires <strong>firstName</strong> and <strong>lastName</strong> as <strong>string</strong></li>
+            </ul>
+            <li>Create a file <strong>Subject.ts</strong> and write a <strong>Subject</strong> class in the same namespace named <strong>Subjects</strong>.</li>
+            <ul>
+                <li>The class has one attribute <strong>teacher</strong> that implements the <strong>Teacher</strong> interface</li>
+                <li>The class has one setter method <strong>setTeacher</strong> that accepts a teacher in argument (and as setter, set the instance attribute <strong>teacher</strong> with it)</li>
+            </ul>
+            <li>Create a file <strong>Cpp.ts</strong> and make the following modifications in the same namespace.</li>
+            <ul>
+                <li>Using declaration merging, add a new optional attribute <strong>experienceTeachingC</strong> (number) to the <strong>Teacher</strong> interface</li>
+                <li>Create a class <strong>Cpp</strong> extending from <strong>Subject</strong></li>
+                <li>Write a method named <strong>getRequirements</strong> that will return a string <strong>Here is the list of requirements for Cpp</strong></li>
+                <li>Write a method named <strong>getAvailableTeacher</strong> that will return a string <strong>Available Teacher: &lt;first name of teacher&gt;</strong></li>
+                <li>If the teacher doesn’t have any experience in teaching C, then the method should return a string <strong>No available teacher</strong></li>
+            </ul>
+            <li>Create a file <strong>React.ts</strong> and write a <strong>React</strong> Class in the same namespace.</li>
+            <ul>
+                <li>Add a new attribute <strong>experienceTeachingReact?</strong> (number) to the <strong>Teacher</strong> interface</li>
+                <li>In the class, write a method named <strong>getRequirements</strong> that will return a string <strong>Here is the list of requirements for React</strong></li>
+                <li>Write a method named <strong>getAvailableTeacher</strong> that will return a string <strong>Available Teacher: &lt;first name of teacher&gt;</strong></li>
+                <li>If the teacher doesn’t have any experience in teaching React, then the method should return a string <strong>No available teacher</strong></li>
+            </ul>
+            <li>Create a file <strong>Java.ts</strong> and write a <strong>Java</strong> Class in the same namespace.</li>
+            <ul>
+                <li>Add a new attribute <strong>experienceTeachingJava?</strong> (number) to the <strong>Teacher</strong> interface</li>
+                <li>In the class, write a method named <strong>getRequirements</strong> that will return a string <strong>Here is the list of requirements for Java</strong></li>
+                <li>Write a method named <strong>getAvailableTeacher</strong> that will return a string <strong>Available Teacher: &lt;first name of teacher&gt;</strong></li>
+                <li>If the teacher doesn’t have any experience in teaching Java, then the method should return a string <strong>No available teacher</strong></li>
+            </ul>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_4/package.json, task_4/tsconfig.json, task_4/js/subjects/Cpp.ts, task_4/js/subjects/Java.ts, task_4/js/subjects/React.ts, task_4/js/subjects/Subject.ts, task_4/js/subjects/Teacher.ts</strong></li>
+    </ul>  
 <br>
-    <h2>Task 10: Update task_4/js/main.ts</h2>
-    <p>
-        <code>
-            // Update task_4/js/main.ts
-            // create and export a constant cpp for Cpp Subjects
-            export const cpp = new Subjects.Cpp();
-            // create and export a constant java for Java Subjects
-            export const java = new Subjects.Java();
-            // create and export a constant react for React Subjects
-            export const react = new Subjects.React();
-            // create and export one Teacher object cTeacher with experienceTeachingC = 10
-            export const cTeacher: Subjects.Teacher = { firstName: "John", lastName: "Doe", experienceTeachingC: 10 };
-            // for Cpp subject, log to the console C++, set cTeacher as the teacher,
-            // call the two methods getRequirements and getAvailableTeacher
-            // and print the strings they return
-            console.log("Cpp:");
-            cpp.setTeacher(cTeacher);
-            console.log(cpp.getRequirements());
-            console.log(cpp.getAvailableTeacher());
-            // for Java subject, log to the console Java, set cTeacher as the teacher,
-            // call the two methods getRequirements and getAvailableTeacher,
-            // and print the strings they return
-            console.log("Java:");
-            java.setTeacher(cTeacher);
-            console.log(java.getRequirements());
-            console.log(java.getAvailableTeacher());
-            // for React subject, log to the console React, set cTeacher as the teacher,
-            // call the two methods getRequirements and getAvailableTeacher,
-            // and print the strings they return
-            console.log("React:");
-            react.setTeacher(cTeacher);
-            console.log(react.getRequirements());
-            console.log(react.getAvailableTeacher());
-        </code>
-    </p>
-<h2>Task 11: Brand convention & Nominal typing</h2>
-    <p>
-        <code>
-            Create a directory task_5 and copy these configuration files into the root of task_5: package.json, tsconfig.json, webpack.config.js
-            Create two interfaces MajorCredits and MinorCredits in task_5/js/main.ts:
-            Each interface defines a number named credits
-            Add a brand property to each interface in order to uniquely identify each of them
-            Create two functions named sumMajorCredits and sumMinorCredits in task_5/js/main.ts:
-            Each function takes two arguments subject1 and subject2
-            sumMajorCredits returns MajorCredits value and sumMinorCredits returns MinorCredits value
-            Each function sums the credits of the two subjects
-        </code>
-    </p>
-</p>
+<h2>Task 10: Update task_4/js/main.ts</h2>    
+    <ul>
+        <li>In <strong>task_4/js/main.ts</strong>:</li>
+        <ul>
+            <li>Create and export a constant <strong>cpp</strong> for <strong>Cpp Subjects</strong></li>
+            <li>Create and export a constant <strong>java</strong> for <strong>Java Subjects</strong></li>
+            <li>Create and export a constant <strong>react</strong> for <strong>React Subjects</strong></li>
+            <li>Create and export one <strong>Teacher</strong> object <strong>cTeacher</strong> with <strong>experienceTeachingC = 10</strong></li>
+            <li>For <strong>Cpp subject</strong>, log to the console <strong>C++</strong>, set <strong>cTeacher</strong> as the teacher, call the two methods <strong>getRequirements</strong> and <strong>getAvailableTeacher</strong> and print the strings they return</li>
+            <li>For <strong>Java subject</strong>, log to the console <strong>Java</strong>, set <strong>cTeacher</strong> as the teacher, call the two methods <strong>getRequirements</strong> and <strong>getAvailableTeacher</strong>, and print the strings they return</li>
+            <li>For <strong>React subject</strong>, log to the console <strong>React</strong>, set <strong>cTeacher</strong> as the teacher, call the two methods <strong>getRequirements</strong> and <strong>getAvailableTeacher</strong>, and print the strings they return</li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>File: <strong>task_4/js/main.ts</strong></li>
+    </ul>
+     <h2>Task 11: Brand convention & Nominal typing</h2>    
+    <ul>
+        <li>Create a directory <strong>task_5</strong> and copy these configuration files into the root of <strong>task_5</strong>: <strong>package.json, tsconfig.json, webpack.config.js</strong></li>
+        <li>Create two interfaces <strong>MajorCredits</strong> and <strong>MinorCredits</strong> in <strong>task_5/js/main.ts</strong>:</li>
+        <ul>
+            <li>Each interface defines a number named <strong>credits</strong></li>
+            <li>Add a <strong>brand</strong> property to each interface in order to uniquely identify each of them</li>
+        </ul>
+        <li>Create two functions named <strong>sumMajorCredits</strong> and <strong>sumMinorCredits</strong> in <strong>task_5/js/main.ts</strong>:</li>
+        <ul>
+            <li>Each function takes two arguments <strong>subject1</strong> and <strong>subject2</strong></li>
+            <li><strong>sumMajorCredits</strong> returns <strong>MajorCredits</strong> value and <strong>sumMinorCredits</strong> returns <strong>MinorCredits</strong> value</li>
+            <li>Each function sums the credits of the two subjects</li>
+        </ul>
+    </ul>
+    <p>Repo:</p>
+    <ul>
+        <li>GitHub repository: <strong>alx-backend-javascript</strong></li>
+        <li>Directory: <strong>0x04-TypeScript</strong></li>
+        <li>Files: <strong>task_5/js/main.ts, task_5/package.json, task_5/webpack.config.js, task_5/tsconfig.json</strong></li>
+    </ul>
