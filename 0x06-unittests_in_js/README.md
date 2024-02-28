@@ -161,3 +161,64 @@ it('7 is equal to 7', () => {
   <p>Using the file 7-skip.test.js:<br>
   Make the test suite pass without fixing or removing the failing test.<br>
   it description must stay the same.</p>
+  <h1>Integration Testing in Node.js</h1>
+  <h2>8. Basic Integration Testing</h2>
+  <p>In a folder 8-api located at the root of the project directory, copy this package.json over:</p>
+  <pre>
+  {
+    "name": "8-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "./node_modules/mocha/bin/mocha"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "devDependencies": {
+      "chai": "^4.2.0",
+      "mocha": "^6.2.2",
+      "request": "^2.88.0",
+      "sinon": "^7.5.0"
+    }
+  }
+  </pre>
+  <p>Create a new file api.js:<br>
+  By using express, create an instance of express called app.<br>
+  Listen to port 7865 and log API available on localhost port 7865 to the browser console when the express server is started.<br>
+  For the route GET /, return the message Welcome to the payment system.</p>
+  <p>Create a new file api.test.js:<br>
+  Create one suite for the index page:<br>
+  Correct status code?<br>
+  Correct result?<br>
+  Other?</p>
+  <h2>9. Regex Integration Testing</h2>
+  <p>In a folder 9-api, reusing the previous project in 8-api (package.json, api.js and api.test.js).</p>
+  <p>Modify the file api.js:<br>
+  Add a new endpoint: GET /cart/:id.<br>
+  :id must be only a number (validation must be in the route definition).<br>
+  When accessed, the endpoint should return Payment methods for cart :id.</p>
+  <p>Modify the file api.test.js:<br>
+  Add a new test suite for the cart page:<br>
+  Correct status code when :id is a number?<br>
+  Correct status code when :id is NOT a number (=> 404)?<br>
+  etc.</p>
+  <h2>10. Deep Equality & Post Integration Testing</h2>
+  <p>In a folder 10-api, reusing the previous project in 9-api (package.json, api.js and api.test.js).</p>
+  <p>Modify the file api.js:<br>
+  Add an endpoint GET /available_payments that returns an object with the following structure:</p>
+  <pre>
+  {
+    payment_methods: {
+      credit_cards: true,
+      paypal: false
+    }
+  }
+  </pre>
+  <p>Add an endpoint POST /login that returns the message Welcome :username, where :username is the value of the body variable userName.</p>
+  <p>Modify the file api.test.js:<br>
+  Add a test suite for the /login endpoint.<br>
+  Add a test suite for the /available_payments endpoint.</p>
